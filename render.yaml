@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: gymai-manager
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.6-luna
+      - key: AI_WEB_SEARCH
+        value: "true"
+      - key: GYMAI_JWT_SECRET
+        generateValue: true
+      - key: GYMAI_CHATBASE_ACTION_KEY
+        generateValue: true
