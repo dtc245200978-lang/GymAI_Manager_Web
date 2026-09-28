@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GymAI Manager — Quản lý trung tâm thể hình</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">G</div><div><strong>GymAI</strong><span>Manager</span></div></div>
+      <nav>
+        <button class="nav-item active" data-view="dashboard">⌂ <span>Tổng quan</span></button>
+        <button class="nav-item" data-view="members">👥 <span>Hội viên</span></button>
+        <button class="nav-item" data-view="plans">▣ <span>Gói tập</span></button>
+        <button class="nav-item" data-view="schedule">◷ <span>Lịch tập</span></button>
+        <button class="nav-item" data-view="attendance">✓ <span>Điểm danh</span></button>
+        <button class="nav-item" data-view="payments">₫ <span>Thanh toán</span></button>
+        <button class="nav-item" data-view="ai">✦ <span>Trợ lý AI</span></button>
+      </nav>
+      <div class="sidebar-foot">MVP Demo • 2026</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><div class="eyebrow">HỆ THỐNG QUẢN LÝ TRUNG TÂM THỂ HÌNH</div><h1 id="pageTitle">Tổng quan</h1></div>
+        <div class="top-actions"><span class="status-dot"></span><span>Hệ thống hoạt động</span><button class="profile">QT</button></div>
+      </header>
+      <section id="content"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <div id="modalRoot"></div>
+  <script src="chatbase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

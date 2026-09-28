@@ -1,0 +1,3 @@
+AI service integration point.
+Production: connect OpenAI/Gemini/Claude/Hugging Face/Ollama here.
+All AI output must carry the warning that it is reference-only and not medical/professional advice.

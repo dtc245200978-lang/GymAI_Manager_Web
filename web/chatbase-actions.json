@@ -1,0 +1,38 @@
+{
+  "description": "Các Custom Actions cho Chatbase gọi dữ liệu thật từ GymAI Manager",
+  "authentication": {
+    "type": "header",
+    "header": "X-GymAI-Action-Key",
+    "value": "SET_THE_SAME_VALUE_AS_GYMAI_CHATBASE_ACTION_KEY"
+  },
+  "actions": [
+    {
+      "name": "Xem điểm danh hôm nay",
+      "method": "GET",
+      "path": "/api/chatbase/attendance/today",
+      "query": {"member_name": "string, optional"},
+      "use_when": "Người dùng hỏi ai đã điểm danh hôm nay, có bao nhiêu lượt điểm danh hôm nay, hoặc một hội viên cụ thể đã điểm danh hôm nay chưa."
+    },
+    {
+      "name": "Xem lịch tập hôm nay",
+      "method": "GET",
+      "path": "/api/chatbase/schedules/today",
+      "query": {"member_name": "string, optional"},
+      "use_when": "Người dùng hỏi lịch tập hôm nay, lịch của một hội viên hôm nay, hoặc các buổi tập đang diễn ra trong ngày."
+    },
+    {
+      "name": "Tìm hội viên",
+      "method": "GET",
+      "path": "/api/chatbase/members/search",
+      "query": {"name": "string, optional"},
+      "use_when": "Nhân sự được phép hỏi thông tin hội viên hoặc tìm hội viên theo tên."
+    },
+    {
+      "name": "Lịch sử điểm danh hội viên",
+      "method": "GET",
+      "path": "/api/chatbase/member/attendance",
+      "query": {"member_name": "string, required", "limit": "integer, optional, 1-100"},
+      "use_when": "Người dùng được phép xem lịch sử điểm danh của một hội viên."
+    }
+  ]
+}
